@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Contact from './components/Contact';
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Contact from './components/Contact';
 
 function App() {
   //Enable or Disable dark mode
@@ -71,12 +71,12 @@ function App() {
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar siteTitle="Text utils" homeText="Home" aboutText="About" contactText="Contact" mode={mode} toggleMode={toggleMode} toggleModeText={toggleModeText} themeColors={themeColors} changeTheme={changeTheme} themeColor={themeColor} navBg={navBg}/>
       <div className="container my-5">
       <Alert alert={alert}/>
-      
-      <Routes>
+      <TextForm showAlert={showAlert} heading="Enter the text to analyze." mode={mode} themeColors={themeColors} themeColor={themeColor} textColor={textColor}/>
+      {/* <Routes>
         <Route exact path="/"
             element={
               <TextForm showAlert={showAlert} heading="Enter the text to analyze." mode={mode} themeColors={themeColors} themeColor={themeColor} textColor={textColor}/>
@@ -84,9 +84,9 @@ function App() {
         </Route>
         <Route exact path="/about" element={<About mode={mode} textColor={textColor} themeColor={themeColor}/>}></Route>
         <Route exact path='/contact' element={<Contact textColor={textColor} mode={mode} themeColor={themeColor}/>}></Route>
-      </Routes>
+      </Routes> */}
       </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
